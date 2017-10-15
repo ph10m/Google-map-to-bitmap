@@ -4,7 +4,7 @@ import sys
 import random
 import os
 
-city = "Trondheim"
+city = input('by: ')
 city = city.replace(' ','+')
 
 #  address_from = "Kongens Gate 58A" + city
@@ -26,8 +26,8 @@ new_img = "rendered.png"
 
 print("Map from " + address_from + " to " + address_to)
 
-map_url = "https://maps.googleapis.com/maps/api/staticmap?&style=feature:all|element:labels|visibility:off&center="
-map_data = "&zoom=14&size=640x640&maptype=roadmap"
+map_url = "https://maps.googleapis.com/maps/api/staticmap?&style=feature:all|element:labels|visibility:off"
+map_data = "&zoom=14&size=800x800&maptype=roadmap"
 #  marker_size = "tiny"
 #  mark_from = "&markers=size:small%7Ccolor:0xff0000%7C"+address_from+"%"
 #  mark_to = "&markers=size:small%7Ccolor:0xff0000%7C"+address_to+"%"
@@ -35,7 +35,7 @@ mark = "https://i.imgur.com/Khwdgwy.png"
 mark_from = "&markers=icon:" + mark + "%7C"+address_from+"%"
 mark_to = "&markers=icon:" + mark + "%7C"+address_to+"%"
 api_key = "&key=AIzaSyBGPMQimnM2hqZeu4oLayKLk0mW1EYKRcY"
-img_url = map_url + city + map_data + mark_from + mark_to + api_key
+img_url = map_url + map_data + mark_from + mark_to + api_key
 print(img_url)
 
 def main():
