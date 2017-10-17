@@ -74,4 +74,4 @@ class StaticMap:
         return self.url
 
     def name(self):
-        return self.point_one[:10] + "-" + self.point_two[:10]
+        return self.point_one[:10] + self.point_two[:10] + '.txt'

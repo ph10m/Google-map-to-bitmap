@@ -4,7 +4,7 @@ import random
 from numpy import asarray
 from PIL import Image
 from urllib.request import urlopen
-from staticmap import marker, col_to_char, StaticMap
+from staticmap import StaticMap, col_to_char
 
 
 def main():
@@ -31,10 +31,10 @@ def main():
             char_array[j][i] = _char
 
     with open(sm.name(), 'wb') as cmap:
-        for line in cmap:
+        for line in char_array:
             for c in line:
-                chr_file.write(c.encode())
-            chr_file.write('\r\n'.encode())
+                cmap.write(c.encode())
+            cmap.write('\r\n'.encode())
 
 
 main()
